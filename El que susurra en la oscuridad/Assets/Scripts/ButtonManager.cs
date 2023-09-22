@@ -1,19 +1,28 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StudentName(TMP_InputField name)
     {
-        Exit();
+        GameManager.Instance.studentName = name.text;
+    }
+     public void Choice1(int choice)
+    {
+        GameManager.Instance.choice1 = choice;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Choice2(int choice) 
     {
-        
+        GameManager.Instance.choice2 = choice;
+    }
+
+    public void Choice3(int choice)
+    {
+        GameManager.Instance.choice3 = choice;
     }
 
     public void Exit()
